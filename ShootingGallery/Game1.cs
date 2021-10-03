@@ -14,6 +14,11 @@ namespace ShootingGallery
         Texture2D targetSprite;
         Texture2D crosshairsSprite;
         Texture2D backgroundSprite;
+        SpriteFont gameFont;
+
+        // Target
+        Vector2 targetPosition = new Vector2(300, 300);
+        const int targetSize = 45;
 
         public Game1()
         {
@@ -40,6 +45,7 @@ namespace ShootingGallery
             targetSprite = Content.Load<Texture2D>("target");
             crosshairsSprite = Content.Load<Texture2D>("crosshairs");
             backgroundSprite = Content.Load<Texture2D>("sky");
+            gameFont = Content.Load<SpriteFont>("galleryFont");
 
         }
 
@@ -60,7 +66,8 @@ namespace ShootingGallery
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
             _spriteBatch.Draw(backgroundSprite, new Vector2(0, 0), Color.White);
-            _spriteBatch.Draw(targetSprite, new Vector2(0, 0), Color.White);
+            _spriteBatch.DrawString(gameFont, "This is a Test", new Vector2(100,100), Color.White);
+            _spriteBatch.Draw(targetSprite, targetPosition, Color.White);
             _spriteBatch.End();
 
 
