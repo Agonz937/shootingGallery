@@ -1,2 +1,2 @@
 # shootingGallery
-A game where you shoot a target. Made with monogame
+A game where you shoot a target. Made with monogames
